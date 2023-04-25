@@ -1,0 +1,11 @@
+C:\Users\Admin\source\repos\Blood Bank Management\Blood Bank Management\bin\Debug\Blood Bank Management.exe.config
+C:\Users\Admin\source\repos\Blood Bank Management\Blood Bank Management\bin\Debug\Blood Bank Management.exe
+C:\Users\Admin\source\repos\Blood Bank Management\Blood Bank Management\bin\Debug\Blood Bank Management.pdb
+C:\Users\Admin\source\repos\Blood Bank Management\Blood Bank Management\obj\Debug\Blood Bank Management.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\Blood Bank Management\Blood Bank Management\obj\Debug\Blood Bank Management.csproj.SuggestedBindingRedirects.cache
+C:\Users\Admin\source\repos\Blood Bank Management\Blood Bank Management\obj\Debug\Blood_Bank_Management.mainForm.resources
+C:\Users\Admin\source\repos\Blood Bank Management\Blood Bank Management\obj\Debug\Blood_Bank_Management.Properties.Resources.resources
+C:\Users\Admin\source\repos\Blood Bank Management\Blood Bank Management\obj\Debug\Blood Bank Management.csproj.GenerateResource.cache
+C:\Users\Admin\source\repos\Blood Bank Management\Blood Bank Management\obj\Debug\Blood Bank Management.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\Blood Bank Management\Blood Bank Management\obj\Debug\Blood Bank Management.exe
+C:\Users\Admin\source\repos\Blood Bank Management\Blood Bank Management\obj\Debug\Blood Bank Management.pdb
