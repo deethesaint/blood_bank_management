@@ -12,6 +12,8 @@ namespace Blood_Bank_Management
 {
     public partial class mainForm : Form
     {
+        
+
         public mainForm()
         {
             InitializeComponent();
@@ -23,13 +25,19 @@ namespace Blood_Bank_Management
         {
             if (e.CloseReason == CloseReason.WindowsShutDown)
                 return;
-            if (MessageBox.Show("Are you sure you want  to quit?", "Waring", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            if (MessageBox.Show("Are you sure you want to quit?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
                 e.Cancel = true;
         }   
 
         private void mainForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            manageBlood_Participant manageBlood_Participant = new manageBlood_Participant();
+            manageBlood_Participant.Show();
         }
     }
 }
