@@ -33,10 +33,10 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.name_search = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox_search = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.id_search = new System.Windows.Forms.TextBox();
+            this.search_btn = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
@@ -77,17 +77,16 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1039, 296);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellClick += dataGridView1_CellClick;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.name_search);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textBox_search);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.id_search);
+            this.groupBox1.Controls.Add(this.search_btn);
             this.groupBox1.Location = new System.Drawing.Point(12, 314);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(282, 243);
@@ -121,12 +120,12 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Tên";
             // 
-            // textBox1
+            // name_search
             // 
-            this.textBox1.Location = new System.Drawing.Point(44, 69);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(232, 22);
-            this.textBox1.TabIndex = 3;
+            this.name_search.Location = new System.Drawing.Point(44, 69);
+            this.name_search.Name = "name_search";
+            this.name_search.Size = new System.Drawing.Size(232, 22);
+            this.name_search.TabIndex = 3;
             // 
             // label1
             // 
@@ -137,21 +136,22 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "ID";
             // 
-            // textBox_search
+            // id_search
             // 
-            this.textBox_search.Location = new System.Drawing.Point(44, 32);
-            this.textBox_search.Name = "textBox_search";
-            this.textBox_search.Size = new System.Drawing.Size(231, 22);
-            this.textBox_search.TabIndex = 1;
+            this.id_search.Location = new System.Drawing.Point(44, 32);
+            this.id_search.Name = "id_search";
+            this.id_search.Size = new System.Drawing.Size(231, 22);
+            this.id_search.TabIndex = 1;
             // 
-            // button1
+            // search_btn
             // 
-            this.button1.Location = new System.Drawing.Point(7, 204);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(269, 33);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Tìm kiếm";
-            this.button1.UseVisualStyleBackColor = true;
+            this.search_btn.Location = new System.Drawing.Point(7, 204);
+            this.search_btn.Name = "search_btn";
+            this.search_btn.Size = new System.Drawing.Size(269, 33);
+            this.search_btn.TabIndex = 0;
+            this.search_btn.Text = "Tìm kiếm";
+            this.search_btn.UseVisualStyleBackColor = true;
+            this.search_btn.Click += new System.EventHandler(this.search_btn_Click);
             // 
             // groupBox2
             // 
@@ -200,6 +200,7 @@
             this.button7.TabIndex = 19;
             this.button7.Text = "Hồ sơ hiến máu";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button6
             // 
@@ -372,7 +373,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1081, 569);
+            this.ClientSize = new System.Drawing.Size(1062, 564);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
@@ -395,10 +396,10 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox name_search;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox_search;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox id_search;
+        private System.Windows.Forms.Button search_btn;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label10;
@@ -421,5 +422,8 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
+
+        
+
     }
 }

@@ -78,3 +78,8 @@ C:\Users\Admin\source\repos\Blood Bank Management\Blood Bank Management\bin\Debu
 C:\Users\Admin\source\repos\Blood Bank Management\Blood Bank Management\bin\Debug\zh-Hans\Microsoft.Data.SqlClient.resources.dll
 C:\Users\Admin\source\repos\Blood Bank Management\Blood Bank Management\bin\Debug\zh-Hant\Microsoft.Data.SqlClient.resources.dll
 C:\Users\Admin\source\repos\Blood Bank Management\Blood Bank Management\obj\Debug\Blood Bank Management.csproj.CopyComplete
+C:\Users\Admin\source\repos\Blood Bank Management\Blood Bank Management\obj\Debug\Blood_Bank_Management.manageDonation_record.resources
+C:\Users\Admin\source\repos\Blood Bank Management\Blood Bank Management\bin\Debug\Blood Bank Management.exe.manifest
+C:\Users\Admin\source\repos\Blood Bank Management\Blood Bank Management\bin\Debug\Blood Bank Management.application
+C:\Users\Admin\source\repos\Blood Bank Management\Blood Bank Management\obj\Debug\Blood Bank Management.exe.manifest
+C:\Users\Admin\source\repos\Blood Bank Management\Blood Bank Management\obj\Debug\Blood Bank Management.application
