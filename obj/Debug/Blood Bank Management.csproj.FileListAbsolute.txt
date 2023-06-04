@@ -83,3 +83,7 @@ C:\Users\Admin\source\repos\Blood Bank Management\Blood Bank Management\bin\Debu
 C:\Users\Admin\source\repos\Blood Bank Management\Blood Bank Management\bin\Debug\Blood Bank Management.application
 C:\Users\Admin\source\repos\Blood Bank Management\Blood Bank Management\obj\Debug\Blood Bank Management.exe.manifest
 C:\Users\Admin\source\repos\Blood Bank Management\Blood Bank Management\obj\Debug\Blood Bank Management.application
+C:\Users\Admin\source\repos\Blood Bank Management\Blood Bank Management\obj\Debug\Blood_Bank_Management.blood_test_form.resources
+C:\Users\Admin\source\repos\Blood Bank Management\Blood Bank Management\obj\Debug\Blood_Bank_Management.assistant_form.resources
+C:\Users\Admin\source\repos\Blood Bank Management\Blood Bank Management\obj\Debug\Blood_Bank_Management.blood_request_form.resources
+C:\Users\Admin\source\repos\Blood Bank Management\Blood Bank Management\obj\Debug\Blood_Bank_Management.blood_donation_event_form.resources

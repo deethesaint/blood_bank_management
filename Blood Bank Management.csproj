@@ -212,6 +212,30 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="assistant_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="assistant_form.Designer.cs">
+      <DependentUpon>assistant_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="blood_donation_event_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="blood_donation_event_form.Designer.cs">
+      <DependentUpon>blood_donation_event_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="blood_request_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="blood_request_form.Designer.cs">
+      <DependentUpon>blood_request_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="blood_test_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="blood_test_form.Designer.cs">
+      <DependentUpon>blood_test_form.cs</DependentUpon>
+    </Compile>
     <Compile Include="DatabaseConnection.cs" />
     <Compile Include="mainForm.cs">
       <SubType>Form</SubType>
@@ -233,6 +257,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="assistant_form.resx">
+      <DependentUpon>assistant_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="blood_donation_event_form.resx">
+      <DependentUpon>blood_donation_event_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="blood_request_form.resx">
+      <DependentUpon>blood_request_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="blood_test_form.resx">
+      <DependentUpon>blood_test_form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="mainForm.resx">
       <DependentUpon>mainForm.cs</DependentUpon>
     </EmbeddedResource>

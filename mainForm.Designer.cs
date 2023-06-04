@@ -29,6 +29,15 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.refresh = new System.Windows.Forms.Button();
+            this.orhdm = new System.Windows.Forms.Label();
+            this.abrhdm = new System.Windows.Forms.Label();
+            this.brhdm = new System.Windows.Forms.Label();
+            this.arhdm = new System.Windows.Forms.Label();
+            this.orhdp = new System.Windows.Forms.Label();
+            this.abrhdp = new System.Windows.Forms.Label();
+            this.brhdp = new System.Windows.Forms.Label();
+            this.arhdp = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -52,19 +61,9 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.button9 = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.arhdp = new System.Windows.Forms.Label();
-            this.brhdp = new System.Windows.Forms.Label();
-            this.abrhdp = new System.Windows.Forms.Label();
-            this.orhdp = new System.Windows.Forms.Label();
-            this.arhdm = new System.Windows.Forms.Label();
-            this.brhdm = new System.Windows.Forms.Label();
-            this.abrhdm = new System.Windows.Forms.Label();
-            this.orhdm = new System.Windows.Forms.Label();
-            this.refresh = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -101,6 +100,87 @@
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin kho lưu trữ máu";
+            // 
+            // refresh
+            // 
+            this.refresh.Location = new System.Drawing.Point(326, 10);
+            this.refresh.Name = "refresh";
+            this.refresh.Size = new System.Drawing.Size(41, 40);
+            this.refresh.TabIndex = 16;
+            this.refresh.UseVisualStyleBackColor = true;
+            this.refresh.Click += new System.EventHandler(this.refresh_Click);
+            // 
+            // orhdm
+            // 
+            this.orhdm.AutoSize = true;
+            this.orhdm.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.8F);
+            this.orhdm.Location = new System.Drawing.Point(214, 384);
+            this.orhdm.Name = "orhdm";
+            this.orhdm.Size = new System.Drawing.Size(0, 31);
+            this.orhdm.TabIndex = 15;
+            // 
+            // abrhdm
+            // 
+            this.abrhdm.AutoSize = true;
+            this.abrhdm.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.8F);
+            this.abrhdm.Location = new System.Drawing.Point(214, 330);
+            this.abrhdm.Name = "abrhdm";
+            this.abrhdm.Size = new System.Drawing.Size(0, 31);
+            this.abrhdm.TabIndex = 14;
+            // 
+            // brhdm
+            // 
+            this.brhdm.AutoSize = true;
+            this.brhdm.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.8F);
+            this.brhdm.Location = new System.Drawing.Point(214, 284);
+            this.brhdm.Name = "brhdm";
+            this.brhdm.Size = new System.Drawing.Size(0, 31);
+            this.brhdm.TabIndex = 13;
+            // 
+            // arhdm
+            // 
+            this.arhdm.AutoSize = true;
+            this.arhdm.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.8F);
+            this.arhdm.Location = new System.Drawing.Point(214, 234);
+            this.arhdm.Name = "arhdm";
+            this.arhdm.Size = new System.Drawing.Size(0, 31);
+            this.arhdm.TabIndex = 12;
+            // 
+            // orhdp
+            // 
+            this.orhdp.AutoSize = true;
+            this.orhdp.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.8F);
+            this.orhdp.Location = new System.Drawing.Point(214, 184);
+            this.orhdp.Name = "orhdp";
+            this.orhdp.Size = new System.Drawing.Size(0, 31);
+            this.orhdp.TabIndex = 11;
+            // 
+            // abrhdp
+            // 
+            this.abrhdp.AutoSize = true;
+            this.abrhdp.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.8F);
+            this.abrhdp.Location = new System.Drawing.Point(214, 134);
+            this.abrhdp.Name = "abrhdp";
+            this.abrhdp.Size = new System.Drawing.Size(0, 31);
+            this.abrhdp.TabIndex = 10;
+            // 
+            // brhdp
+            // 
+            this.brhdp.AutoSize = true;
+            this.brhdp.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.8F);
+            this.brhdp.Location = new System.Drawing.Point(214, 84);
+            this.brhdp.Name = "brhdp";
+            this.brhdp.Size = new System.Drawing.Size(0, 31);
+            this.brhdp.TabIndex = 9;
+            // 
+            // arhdp
+            // 
+            this.arhdp.AutoSize = true;
+            this.arhdp.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.8F);
+            this.arhdp.Location = new System.Drawing.Point(214, 34);
+            this.arhdp.Name = "arhdp";
+            this.arhdp.Size = new System.Drawing.Size(0, 31);
+            this.arhdp.TabIndex = 8;
             // 
             // label8
             // 
@@ -290,6 +370,7 @@
             this.button5.TabIndex = 9;
             this.button5.Text = "Quản lý hồ sơ xét nghiệm";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
@@ -319,10 +400,10 @@
             this.button9.TabIndex = 8;
             this.button9.Text = "Quản lý hồ sơ yêu cầu cung cấp máu";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // groupBox6
             // 
-            this.groupBox6.Controls.Add(this.button13);
             this.groupBox6.Controls.Add(this.button14);
             this.groupBox6.Location = new System.Drawing.Point(548, 219);
             this.groupBox6.Name = "groupBox6";
@@ -330,15 +411,6 @@
             this.groupBox6.TabIndex = 14;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Sự kiện hiến máu";
-            // 
-            // button13
-            // 
-            this.button13.Location = new System.Drawing.Point(6, 80);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(246, 53);
-            this.button13.TabIndex = 9;
-            this.button13.Text = "Danh sách người tham gia";
-            this.button13.UseVisualStyleBackColor = true;
             // 
             // button14
             // 
@@ -348,6 +420,7 @@
             this.button14.TabIndex = 8;
             this.button14.Text = "Quản lý sự kiện";
             this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // groupBox7
             // 
@@ -367,87 +440,7 @@
             this.button2.TabIndex = 8;
             this.button2.Text = "Quản lý nhân viên";
             this.button2.UseVisualStyleBackColor = true;
-            // 
-            // arhdp
-            // 
-            this.arhdp.AutoSize = true;
-            this.arhdp.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.8F);
-            this.arhdp.Location = new System.Drawing.Point(214, 34);
-            this.arhdp.Name = "arhdp";
-            this.arhdp.Size = new System.Drawing.Size(0, 31);
-            this.arhdp.TabIndex = 8;
-            // 
-            // brhdp
-            // 
-            this.brhdp.AutoSize = true;
-            this.brhdp.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.8F);
-            this.brhdp.Location = new System.Drawing.Point(214, 84);
-            this.brhdp.Name = "brhdp";
-            this.brhdp.Size = new System.Drawing.Size(0, 31);
-            this.brhdp.TabIndex = 9;
-            // 
-            // abrhdp
-            // 
-            this.abrhdp.AutoSize = true;
-            this.abrhdp.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.8F);
-            this.abrhdp.Location = new System.Drawing.Point(214, 134);
-            this.abrhdp.Name = "abrhdp";
-            this.abrhdp.Size = new System.Drawing.Size(0, 31);
-            this.abrhdp.TabIndex = 10;
-            // 
-            // orhdp
-            // 
-            this.orhdp.AutoSize = true;
-            this.orhdp.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.8F);
-            this.orhdp.Location = new System.Drawing.Point(214, 184);
-            this.orhdp.Name = "orhdp";
-            this.orhdp.Size = new System.Drawing.Size(0, 31);
-            this.orhdp.TabIndex = 11;
-            // 
-            // arhdm
-            // 
-            this.arhdm.AutoSize = true;
-            this.arhdm.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.8F);
-            this.arhdm.Location = new System.Drawing.Point(214, 234);
-            this.arhdm.Name = "arhdm";
-            this.arhdm.Size = new System.Drawing.Size(0, 31);
-            this.arhdm.TabIndex = 12;
-            // 
-            // brhdm
-            // 
-            this.brhdm.AutoSize = true;
-            this.brhdm.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.8F);
-            this.brhdm.Location = new System.Drawing.Point(214, 284);
-            this.brhdm.Name = "brhdm";
-            this.brhdm.Size = new System.Drawing.Size(0, 31);
-            this.brhdm.TabIndex = 13;
-            // 
-            // abrhdm
-            // 
-            this.abrhdm.AutoSize = true;
-            this.abrhdm.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.8F);
-            this.abrhdm.Location = new System.Drawing.Point(214, 330);
-            this.abrhdm.Name = "abrhdm";
-            this.abrhdm.Size = new System.Drawing.Size(0, 31);
-            this.abrhdm.TabIndex = 14;
-            // 
-            // orhdm
-            // 
-            this.orhdm.AutoSize = true;
-            this.orhdm.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.8F);
-            this.orhdm.Location = new System.Drawing.Point(214, 384);
-            this.orhdm.Name = "orhdm";
-            this.orhdm.Size = new System.Drawing.Size(0, 31);
-            this.orhdm.TabIndex = 15;
-            // 
-            // refresh
-            // 
-            this.refresh.Location = new System.Drawing.Point(326, 10);
-            this.refresh.Name = "refresh";
-            this.refresh.Size = new System.Drawing.Size(41, 40);
-            this.refresh.TabIndex = 16;
-            this.refresh.UseVisualStyleBackColor = true;
-            this.refresh.Click += new System.EventHandler(this.refresh_Click);
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // pictureBox1
             // 
@@ -516,7 +509,6 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.Button button2;

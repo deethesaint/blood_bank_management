@@ -81,5 +81,29 @@ namespace Blood_Bank_Management
             manageDonation_record manageDonation_Record = new manageDonation_record();
             manageDonation_Record.Show();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            blood_test_form blood_Test_Form = new blood_test_form();
+            blood_Test_Form.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            assistant_form assistant_Form = new assistant_form();
+            assistant_Form.Show();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            blood_request_form blood_Request_Form = new blood_request_form();
+            blood_Request_Form.Show();
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            blood_donation_event_form blood_Donation_Event_Form = new blood_donation_event_form();
+            blood_Donation_Event_Form.Show();
+        }
     }
 }

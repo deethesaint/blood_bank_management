@@ -66,14 +66,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Blood Bank Management.exe" size="85456">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Blood Bank Management.exe" size="98768">
       <assemblyIdentity name="Blood Bank Management" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>e6ZIGupcpqE2jqLhpybIYkfFjg8Ar5zJMwuCCreCG/s=</dsig:DigestValue>
+        <dsig:DigestValue>KT7VcUpIbDPWHgRfokRLGA6Fz3l1R9Kjc3kGLqvaj3k=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -110,22 +110,22 @@ namespace Blood_Bank_Management
             if (id_search.Text != String.Empty || name_search.Text != String.Empty || comboBox1.Text != String.Empty)
             {
                 bool needAnd = false;
-                where += " where ";
+                where_inner += " where ";
                 if (id_search.Text != String.Empty)
                 {
-                    where += "bp.participant_id = '" + id_search.Text + "' ";
+                    where_inner += "bp.participant_id = '" + id_search.Text + "' ";
                     needAnd = true;
                 }
                 if (name_search.Text != String.Empty)
                 {
-                    if (needAnd) where += "and ";
+                    if (needAnd) where_inner += "and ";
                     else needAnd = true;
-                    where += "bp.participant_name like N'%" + name_search.Text + "%' ";
+                    where_inner += "bp.participant_name like N'%" + name_search.Text + "%' ";
                 }
                 if (comboBox1.Text != String.Empty)
                 {
-                    if (needAnd) where += "and ";
-                    where += "bp.participant_blood_type = '" + comboBox1.Text + "' ";
+                    if (needAnd) where_inner += "and ";
+                    where_inner += "bp.participant_blood_type = '" + comboBox1.Text + "' ";
                 }
             }
             query += where_inner;
@@ -134,9 +134,16 @@ namespace Blood_Bank_Management
 
         private void button7_Click(object sender, EventArgs e)
         {
-            String args_where = "dr.participant_id = '" + dataGridView1.CurrentRow.Cells["ID"].Value.ToString() + "'";
+            String args_where = " where dr.participant_id = '" + dataGridView1.CurrentRow.Cells["ID"].Value.ToString() + "'";
             manageDonation_record manageDonation_Record = new manageDonation_record(args_where);
             manageDonation_Record.Show();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            String args_where = " where bp.participant_id = '" + dataGridView1.CurrentRow.Cells["ID"].Value.ToString() + "'";
+            blood_request_form blood_Request_Form = new blood_request_form(args_where);
+            blood_Request_Form.Show();
         }
     }
 }

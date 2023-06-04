@@ -66,8 +66,7 @@ namespace Blood_Bank_Management
         private void manageDonation_record_Load(object sender, EventArgs e)
         {
             String query = "select dr.record_id N'ID', dr.participant_id N'ID Người hiến', bp.participant_name N'Tên người hiến',\r\n\t   dr.blood_type N'Nhóm máu', dr.record_date N'Ngày hiến', dr.record_blood_quantity N'Thể tích',\r\n\t   ast.assistant_name N'Nhân viên', dr.blood_record_approval N'Tình trạng'\r\nfrom donation_record dr\r\njoin blood_participant bp on dr.participant_id = bp.participant_id\r\njoin assistant ast on ast.assistant_id = dr.assistant_id";
-            if (where != String.Empty)
-                query += (" where " + where);
+            query += where;
             db_Load(query);
         }
     }
