@@ -69,5 +69,12 @@ namespace Blood_Bank_Management
             query += where;
             db_Load(query);
         }
+
+        private void blood_test_ref_Click(object sender, EventArgs e)
+        {
+            String where_inner = " where bt.record_id = '" + dataGridView1.CurrentRow.Cells["ID"].Value.ToString() + "'";
+            blood_test_form blood_Test = new blood_test_form(where_inner);
+            blood_Test.ShowDialog();
+        }
     }
 }

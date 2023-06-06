@@ -66,14 +66,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Blood Bank Management.exe" size="98768">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Blood Bank Management.exe" size="110032">
       <assemblyIdentity name="Blood Bank Management" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>KT7VcUpIbDPWHgRfokRLGA6Fz3l1R9Kjc3kGLqvaj3k=</dsig:DigestValue>
+        <dsig:DigestValue>iSYuB0S7vYLJoqxV9C9ugwf/Q7Pdywm/3MQ1xDS5mhY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -342,6 +342,18 @@
     </dependentAssembly>
   </dependency>
   <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="System.Data.SqlClient.dll" size="223680">
+      <assemblyIdentity name="System.Data.SqlClient" version="4.6.1.5" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>XLvfIimXAlWFdcEKgwZWiG94bzxc30Ncu2nhtbMxvBM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="System.Diagnostics.DiagnosticSource.dll" size="63864">
       <assemblyIdentity name="System.Diagnostics.DiagnosticSource" version="4.0.4.0" publicKeyToken="CC7B13FFCD2DDD51" language="neutral" processorArchitecture="msil" />
       <hash>
@@ -509,13 +521,31 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Blood Bank Management.exe.config" size="2540">
+  <file name="BBDB.mdf" size="8388608" writeableType="applicationData">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>92JD1W9k39tFSCmcSpfGIBwGgUGDgamoG0ojsoxWjc8=</dsig:DigestValue>
+      <dsig:DigestValue>egPbtHQkbxpWIpDqPcrrRcIemJEABWsSIJUHer+tN0o=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="BBDB_log.ldf" size="8388608" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>1/z6Mbi86u9oZjXSOZQjctEAELdrpndEfZrydqVusGQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Blood Bank Management.exe.config" size="4105">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>s19NLfX8jdnB0NtCcOiT4gI/eAWU5HaUVw6HPGlXfsM=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Microsoft.Data.SqlClient.SNI.arm64.dll" size="491424">

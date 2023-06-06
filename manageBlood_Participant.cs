@@ -15,12 +15,31 @@ namespace Blood_Bank_Management
     {
         String where = String.Empty;
 
+        int gb = 0;
+
         public manageBlood_Participant()
         {
             InitializeComponent();
             CenterToScreen();
             this.dataGridView1.CellClick += dataGridView1_CellClick;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            comboBox1.Items.Add("A Rh(D)+");
+            comboBox1.Items.Add("B Rh(D)+");
+            comboBox1.Items.Add("AB Rh(D)+");
+            comboBox1.Items.Add("O Rh(D)+");
+            comboBox1.Items.Add("A Rh(D)-");
+            comboBox1.Items.Add("B Rh(D)-");
+            comboBox1.Items.Add("AB Rh(D)-");
+            comboBox1.Items.Add("O Rh(D)-");
+
+            comboBox2.Items.Add("A Rh(D)+");
+            comboBox2.Items.Add("B Rh(D)+");
+            comboBox2.Items.Add("AB Rh(D)+");
+            comboBox2.Items.Add("O Rh(D)+");
+            comboBox2.Items.Add("A Rh(D)-");
+            comboBox2.Items.Add("B Rh(D)-");
+            comboBox2.Items.Add("AB Rh(D)-");
+            comboBox2.Items.Add("O Rh(D)-");
         }
 
         public manageBlood_Participant(String where)
@@ -30,6 +49,23 @@ namespace Blood_Bank_Management
             this.dataGridView1.CellClick += dataGridView1_CellClick;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.where = where;
+            comboBox1.Items.Add("A Rh(D)+");
+            comboBox1.Items.Add("B Rh(D)+");
+            comboBox1.Items.Add("AB Rh(D)+");
+            comboBox1.Items.Add("O Rh(D)+");
+            comboBox1.Items.Add("A Rh(D)-");
+            comboBox1.Items.Add("B Rh(D)-");
+            comboBox1.Items.Add("AB Rh(D)-");
+            comboBox1.Items.Add("O Rh(D)-");
+
+            comboBox2.Items.Add("A Rh(D)+");
+            comboBox2.Items.Add("B Rh(D)+");
+            comboBox2.Items.Add("AB Rh(D)+");
+            comboBox2.Items.Add("O Rh(D)+");
+            comboBox2.Items.Add("A Rh(D)-");
+            comboBox2.Items.Add("B Rh(D)-");
+            comboBox2.Items.Add("AB Rh(D)-");
+            comboBox2.Items.Add("O Rh(D)-");
         }
 
         private void db_Load(String query)
@@ -55,23 +91,6 @@ namespace Blood_Bank_Management
                 if (dataGridView1.Rows.Count > 0)
                     dataGridView1.CurrentCell = dataGridView1.Rows[0].Cells[0];
 
-                comboBox1.Items.Add("A Rh(D)+");
-                comboBox1.Items.Add("B Rh(D)+");
-                comboBox1.Items.Add("AB Rh(D)+");
-                comboBox1.Items.Add("O Rh(D)+");
-                comboBox1.Items.Add("A Rh(D)-");
-                comboBox1.Items.Add("B Rh(D)-");
-                comboBox1.Items.Add("AB Rh(D)-");
-                comboBox1.Items.Add("O Rh(D)-");
-
-                comboBox2.Items.Add("A Rh(D)+");
-                comboBox2.Items.Add("B Rh(D)+");
-                comboBox2.Items.Add("AB Rh(D)+");
-                comboBox2.Items.Add("O Rh(D)+");
-                comboBox2.Items.Add("A Rh(D)-");
-                comboBox2.Items.Add("B Rh(D)-");
-                comboBox2.Items.Add("AB Rh(D)-");
-                comboBox2.Items.Add("O Rh(D)-");
                 connection.Close();
             }
             catch (SqlException ex)
@@ -81,11 +100,35 @@ namespace Blood_Bank_Management
             }
         }
 
+        private void executeDB(String query)
+        {
+            SqlConnection connection = DatabaseConnection.Instance.getConnection();
+            try
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand(query, connection);
+                command.ExecuteNonQuery();
+                connection.Close();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Oops! Có lỗi đã xảy ra, hãy kiểm tra dữ liệu nhập vào!\nThông báo lỗi cụ thể: - " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                connection.Close();
+            }
+        }
+
         private void manageBlood_Participant_Load(object sender, EventArgs e)
         {
             String query = "select bp.participant_id N'ID', bp.participant_name N'Họ và tên', bp.participant_age N'Tuổi', bp.participant_address N'Địa chỉ', bp.participant_phone N'Số điện thoại', bp.participant_email N'Email', bp.participant_blood_type N'Nhóm máu' from blood_participant as bp";
             query += where;
             db_Load(query);
+            id_tb.Text = dataGridView1.CurrentRow.Cells["ID"].Value.ToString();
+            name_tb.Text = dataGridView1.CurrentRow.Cells["Họ và tên"].Value.ToString();
+            age_tb.Text = dataGridView1.CurrentRow.Cells["Tuổi"].Value.ToString();
+            address_tb.Text = dataGridView1.CurrentRow.Cells["Địa chỉ"].Value.ToString();
+            phone_tb.Text = dataGridView1.CurrentRow.Cells["Số điện thoại"].Value.ToString();
+            email_tb.Text = dataGridView1.CurrentRow.Cells["Email"].Value.ToString();
+            comboBox2.Text = dataGridView1.CurrentRow.Cells["Nhóm máu"].Value.ToString();
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -144,6 +187,114 @@ namespace Blood_Bank_Management
             String args_where = " where bp.participant_id = '" + dataGridView1.CurrentRow.Cells["ID"].Value.ToString() + "'";
             blood_request_form blood_Request_Form = new blood_request_form(args_where);
             blood_Request_Form.Show();
+        }
+
+        private void LockControls(GroupBox groupBox, bool state)
+        {
+            foreach(Control control in groupBox.Controls)
+            {
+                control.Enabled = state;
+            }
+        }
+
+        private void ChangeState(bool state)
+        {
+            id_tb.Enabled = state;
+            name_tb.Enabled = state;
+            phone_tb.Enabled = state;
+            email_tb.Enabled = state;
+            address_tb.Enabled = state;
+            age_tb.Enabled = state;
+            comboBox2.Enabled = state;
+        }
+
+        private void update_btn_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Enabled = false;
+            confirm_btn.Visible = true;
+            cancel_btn.Visible = true;
+            LockControls(groupBox1, false);
+            ChangeState(true);
+            id_tb.Enabled = false;
+            gb = 1;
+        }
+
+        private void cancel_btn_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Enabled = true;
+            confirm_btn.Visible = false;
+            cancel_btn.Visible = false;
+            LockControls(groupBox1, true);
+            ChangeState(false);
+            gb = 0;
+        }
+
+        private void confirm_btn_Click(object sender, EventArgs e)
+        {
+            if (gb == 1)
+            {
+                dataGridView1.Enabled = true;
+                confirm_btn.Visible = false;
+                cancel_btn.Visible = false;
+                LockControls(groupBox1, true);
+                ChangeState(false);
+                String query = "update blood_participant " +
+                    "set participant_name = N'" + name_tb.Text.ToString() + "'," +
+                    "participant_age = " + age_tb.Text.ToString() + "," +
+                    "participant_address = N'" + address_tb.Text.ToString() + "'," +
+                    "participant_phone = '" + phone_tb.Text.ToString() + "'," +
+                    "participant_email = '" + email_tb.Text.ToString() + "'," +
+                    "participant_blood_type = '" + comboBox2.Text.ToString() + "'" +
+                    " where participant_id = '" + id_tb.Text.ToString() + "'";
+                executeDB(query);
+                String queryReload = "select bp.participant_id N'ID', bp.participant_name N'Họ và tên', bp.participant_age N'Tuổi', bp.participant_address N'Địa chỉ', bp.participant_phone N'Số điện thoại', bp.participant_email N'Email', bp.participant_blood_type N'Nhóm máu' from blood_participant as bp";
+                db_Load(queryReload);
+            }    
+            else if (gb == 2)
+            {
+                dataGridView1.Enabled = true;
+                confirm_btn.Visible = false;
+                cancel_btn.Visible = false;
+                LockControls(groupBox1, true);
+                ChangeState(false);
+                String query = "insert into blood_participant " +
+                    "values (" +
+                    "'" + id_tb.Text.ToString() + "'," +
+                    "N'" + name_tb.Text.ToString() + "'," +
+                    "'" + age_tb.Text.ToString() + "'," +
+                    "N'" + address_tb.Text.ToString() + "'," +
+                    "'" + phone_tb.Text.ToString() + "'," +
+                    "'" + email_tb.Text.ToString() + "'," +
+                    "'" + comboBox2.Text.ToString() + "'" + ")";
+                executeDB(query);
+                String queryReload = "select bp.participant_id N'ID', bp.participant_name N'Họ và tên', bp.participant_age N'Tuổi', bp.participant_address N'Địa chỉ', bp.participant_phone N'Số điện thoại', bp.participant_email N'Email', bp.participant_blood_type N'Nhóm máu' from blood_participant as bp";
+                db_Load(queryReload);
+            }
+            gb = 0;
+        }
+
+        private void add_btn_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Enabled = false;
+            confirm_btn.Visible = true;
+            cancel_btn.Visible = true;
+            LockControls(groupBox1, false);
+            ChangeState(true);
+            id_tb.Text = String.Empty;
+            age_tb.Text = String.Empty;
+            address_tb.Text = String.Empty;
+            phone_tb.Text = String.Empty;
+            email_tb.Text = String.Empty;
+            name_tb.Text = String.Empty;
+            gb = 2;
+        }
+
+        private void del_btn_Click(object sender, EventArgs e)
+        {
+            String query = "delete blood_participant where participant_id = '" + id_tb.Text.ToString() + "'";
+            executeDB(query);
+            String queryReload = "select bp.participant_id N'ID', bp.participant_name N'Họ và tên', bp.participant_age N'Tuổi', bp.participant_address N'Địa chỉ', bp.participant_phone N'Số điện thoại', bp.participant_email N'Email', bp.participant_blood_type N'Nhóm máu' from blood_participant as bp";
+            db_Load(queryReload);
         }
     }
 }

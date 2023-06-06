@@ -87,3 +87,7 @@ C:\Users\Admin\source\repos\Blood Bank Management\Blood Bank Management\obj\Debu
 C:\Users\Admin\source\repos\Blood Bank Management\Blood Bank Management\obj\Debug\Blood_Bank_Management.assistant_form.resources
 C:\Users\Admin\source\repos\Blood Bank Management\Blood Bank Management\obj\Debug\Blood_Bank_Management.blood_request_form.resources
 C:\Users\Admin\source\repos\Blood Bank Management\Blood Bank Management\obj\Debug\Blood_Bank_Management.blood_donation_event_form.resources
+C:\Users\Admin\source\repos\Blood Bank Management\Blood Bank Management\bin\Debug\BBDB.mdf
+C:\Users\Admin\source\repos\Blood Bank Management\Blood Bank Management\bin\Debug\BBDB_log.ldf
+C:\Users\Admin\source\repos\Blood Bank Management\Blood Bank Management\bin\Debug\System.Data.SqlClient.dll
+C:\Users\Admin\source\repos\Blood Bank Management\Blood Bank Management\bin\Debug\System.Data.SqlClient.xml

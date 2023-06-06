@@ -38,13 +38,13 @@
             this.id_search = new System.Windows.Forms.TextBox();
             this.search_btn = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.blood_req_ref = new System.Windows.Forms.Button();
+            this.blood_don_ref = new System.Windows.Forms.Button();
+            this.cancel_btn = new System.Windows.Forms.Button();
+            this.confirm_btn = new System.Windows.Forms.Button();
+            this.update_btn = new System.Windows.Forms.Button();
+            this.del_btn = new System.Windows.Forms.Button();
+            this.add_btn = new System.Windows.Forms.Button();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.age_tb = new System.Windows.Forms.TextBox();
@@ -59,6 +59,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.id_tb = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.blood_don_add_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -155,13 +156,14 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button8);
-            this.groupBox2.Controls.Add(this.button7);
-            this.groupBox2.Controls.Add(this.button6);
-            this.groupBox2.Controls.Add(this.button5);
-            this.groupBox2.Controls.Add(this.button4);
-            this.groupBox2.Controls.Add(this.button3);
-            this.groupBox2.Controls.Add(this.button2);
+            this.groupBox2.Controls.Add(this.blood_don_add_btn);
+            this.groupBox2.Controls.Add(this.blood_req_ref);
+            this.groupBox2.Controls.Add(this.blood_don_ref);
+            this.groupBox2.Controls.Add(this.cancel_btn);
+            this.groupBox2.Controls.Add(this.confirm_btn);
+            this.groupBox2.Controls.Add(this.update_btn);
+            this.groupBox2.Controls.Add(this.del_btn);
+            this.groupBox2.Controls.Add(this.add_btn);
             this.groupBox2.Controls.Add(this.comboBox2);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.age_tb);
@@ -183,72 +185,77 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Quản lý hồ sơ";
             // 
-            // button8
+            // blood_req_ref
             // 
-            this.button8.Location = new System.Drawing.Point(188, 204);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(173, 33);
-            this.button8.TabIndex = 20;
-            this.button8.Text = "Hồ sơ yêu cầu máu";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.blood_req_ref.Location = new System.Drawing.Point(188, 204);
+            this.blood_req_ref.Name = "blood_req_ref";
+            this.blood_req_ref.Size = new System.Drawing.Size(173, 33);
+            this.blood_req_ref.TabIndex = 20;
+            this.blood_req_ref.Text = "Hồ sơ yêu cầu máu";
+            this.blood_req_ref.UseVisualStyleBackColor = true;
+            this.blood_req_ref.Click += new System.EventHandler(this.button8_Click);
             // 
-            // button7
+            // blood_don_ref
             // 
-            this.button7.Location = new System.Drawing.Point(9, 204);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(173, 33);
-            this.button7.TabIndex = 19;
-            this.button7.Text = "Hồ sơ hiến máu";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.blood_don_ref.Location = new System.Drawing.Point(9, 204);
+            this.blood_don_ref.Name = "blood_don_ref";
+            this.blood_don_ref.Size = new System.Drawing.Size(173, 33);
+            this.blood_don_ref.TabIndex = 19;
+            this.blood_don_ref.Text = "Hồ sơ hiến máu";
+            this.blood_don_ref.UseVisualStyleBackColor = true;
+            this.blood_don_ref.Click += new System.EventHandler(this.button7_Click);
             // 
-            // button6
+            // cancel_btn
             // 
-            this.button6.Location = new System.Drawing.Point(550, 133);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(137, 33);
-            this.button6.TabIndex = 18;
-            this.button6.Text = "Thoát";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Visible = false;
+            this.cancel_btn.Location = new System.Drawing.Point(550, 133);
+            this.cancel_btn.Name = "cancel_btn";
+            this.cancel_btn.Size = new System.Drawing.Size(137, 33);
+            this.cancel_btn.TabIndex = 18;
+            this.cancel_btn.Text = "Thoát";
+            this.cancel_btn.UseVisualStyleBackColor = true;
+            this.cancel_btn.Visible = false;
+            this.cancel_btn.Click += new System.EventHandler(this.cancel_btn_Click);
             // 
-            // button5
+            // confirm_btn
             // 
-            this.button5.Location = new System.Drawing.Point(407, 133);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(137, 33);
-            this.button5.TabIndex = 17;
-            this.button5.Text = "Xác nhận";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Visible = false;
+            this.confirm_btn.Location = new System.Drawing.Point(407, 133);
+            this.confirm_btn.Name = "confirm_btn";
+            this.confirm_btn.Size = new System.Drawing.Size(137, 33);
+            this.confirm_btn.TabIndex = 17;
+            this.confirm_btn.Text = "Xác nhận";
+            this.confirm_btn.UseVisualStyleBackColor = true;
+            this.confirm_btn.Visible = false;
+            this.confirm_btn.Click += new System.EventHandler(this.confirm_btn_Click);
             // 
-            // button4
+            // update_btn
             // 
-            this.button4.Location = new System.Drawing.Point(630, 204);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(115, 33);
-            this.button4.TabIndex = 16;
-            this.button4.Text = "Sửa";
-            this.button4.UseVisualStyleBackColor = true;
+            this.update_btn.Location = new System.Drawing.Point(630, 204);
+            this.update_btn.Name = "update_btn";
+            this.update_btn.Size = new System.Drawing.Size(115, 33);
+            this.update_btn.TabIndex = 16;
+            this.update_btn.Text = "Sửa";
+            this.update_btn.UseVisualStyleBackColor = true;
+            this.update_btn.Click += new System.EventHandler(this.update_btn_Click);
             // 
-            // button3
+            // del_btn
             // 
-            this.button3.Location = new System.Drawing.Point(512, 204);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(115, 33);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "Xóa";
-            this.button3.UseVisualStyleBackColor = true;
+            this.del_btn.Location = new System.Drawing.Point(512, 204);
+            this.del_btn.Name = "del_btn";
+            this.del_btn.Size = new System.Drawing.Size(115, 33);
+            this.del_btn.TabIndex = 15;
+            this.del_btn.Text = "Xóa";
+            this.del_btn.UseVisualStyleBackColor = true;
+            this.del_btn.Click += new System.EventHandler(this.del_btn_Click);
             // 
-            // button2
+            // add_btn
             // 
-            this.button2.Location = new System.Drawing.Point(391, 204);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(115, 33);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "Thêm";
-            this.button2.UseVisualStyleBackColor = true;
+            this.add_btn.Location = new System.Drawing.Point(391, 204);
+            this.add_btn.Name = "add_btn";
+            this.add_btn.Size = new System.Drawing.Size(115, 33);
+            this.add_btn.TabIndex = 14;
+            this.add_btn.Text = "Thêm";
+            this.add_btn.UseVisualStyleBackColor = true;
+            this.add_btn.Click += new System.EventHandler(this.add_btn_Click);
             // 
             // comboBox2
             // 
@@ -270,9 +277,9 @@
             // 
             // age_tb
             // 
+            this.age_tb.Enabled = false;
             this.age_tb.Location = new System.Drawing.Point(452, 66);
             this.age_tb.Name = "age_tb";
-            this.age_tb.ReadOnly = true;
             this.age_tb.Size = new System.Drawing.Size(221, 22);
             this.age_tb.TabIndex = 11;
             // 
@@ -287,9 +294,9 @@
             // 
             // address_tb
             // 
+            this.address_tb.Enabled = false;
             this.address_tb.Location = new System.Drawing.Point(452, 29);
             this.address_tb.Name = "address_tb";
-            this.address_tb.ReadOnly = true;
             this.address_tb.Size = new System.Drawing.Size(221, 22);
             this.address_tb.TabIndex = 9;
             // 
@@ -304,9 +311,9 @@
             // 
             // email_tb
             // 
+            this.email_tb.Enabled = false;
             this.email_tb.Location = new System.Drawing.Point(104, 141);
             this.email_tb.Name = "email_tb";
-            this.email_tb.ReadOnly = true;
             this.email_tb.Size = new System.Drawing.Size(221, 22);
             this.email_tb.TabIndex = 7;
             // 
@@ -321,9 +328,9 @@
             // 
             // phone_tb
             // 
+            this.phone_tb.Enabled = false;
             this.phone_tb.Location = new System.Drawing.Point(104, 103);
             this.phone_tb.Name = "phone_tb";
-            this.phone_tb.ReadOnly = true;
             this.phone_tb.Size = new System.Drawing.Size(221, 22);
             this.phone_tb.TabIndex = 5;
             // 
@@ -338,9 +345,9 @@
             // 
             // name_tb
             // 
+            this.name_tb.Enabled = false;
             this.name_tb.Location = new System.Drawing.Point(104, 66);
             this.name_tb.Name = "name_tb";
-            this.name_tb.ReadOnly = true;
             this.name_tb.Size = new System.Drawing.Size(221, 22);
             this.name_tb.TabIndex = 3;
             // 
@@ -355,9 +362,9 @@
             // 
             // id_tb
             // 
+            this.id_tb.Enabled = false;
             this.id_tb.Location = new System.Drawing.Point(104, 29);
             this.id_tb.Name = "id_tb";
-            this.id_tb.ReadOnly = true;
             this.id_tb.Size = new System.Drawing.Size(221, 22);
             this.id_tb.TabIndex = 1;
             // 
@@ -369,6 +376,15 @@
             this.label4.Size = new System.Drawing.Size(20, 16);
             this.label4.TabIndex = 0;
             this.label4.Text = "ID";
+            // 
+            // blood_don_add_btn
+            // 
+            this.blood_don_add_btn.Location = new System.Drawing.Point(9, 169);
+            this.blood_don_add_btn.Name = "blood_don_add_btn";
+            this.blood_don_add_btn.Size = new System.Drawing.Size(173, 33);
+            this.blood_don_add_btn.TabIndex = 21;
+            this.blood_don_add_btn.Text = "Tạo hồ sơ hiến máu";
+            this.blood_don_add_btn.UseVisualStyleBackColor = true;
             // 
             // manageBlood_Participant
             // 
@@ -416,15 +432,13 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox id_tb;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-
-        
-
+        private System.Windows.Forms.Button blood_req_ref;
+        private System.Windows.Forms.Button blood_don_ref;
+        private System.Windows.Forms.Button cancel_btn;
+        private System.Windows.Forms.Button confirm_btn;
+        private System.Windows.Forms.Button update_btn;
+        private System.Windows.Forms.Button del_btn;
+        private System.Windows.Forms.Button add_btn;
+        private System.Windows.Forms.Button blood_don_add_btn;
     }
 }

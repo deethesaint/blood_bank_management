@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.blood_request_btn = new System.Windows.Forms.Button();
-            this.donation_record_btn = new System.Windows.Forms.Button();
+            this.blood_don_ref = new System.Windows.Forms.Button();
+            this.blood_test_ref = new System.Windows.Forms.Button();
             this.cancel_btn = new System.Windows.Forms.Button();
             this.confirm_btn = new System.Windows.Forms.Button();
-            this.mod_btn = new System.Windows.Forms.Button();
+            this.update_btn = new System.Windows.Forms.Button();
             this.del_btn = new System.Windows.Forms.Button();
             this.add_btn = new System.Windows.Forms.Button();
             this.age_tb = new System.Windows.Forms.TextBox();
@@ -58,11 +58,11 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.blood_request_btn);
-            this.groupBox2.Controls.Add(this.donation_record_btn);
+            this.groupBox2.Controls.Add(this.blood_don_ref);
+            this.groupBox2.Controls.Add(this.blood_test_ref);
             this.groupBox2.Controls.Add(this.cancel_btn);
             this.groupBox2.Controls.Add(this.confirm_btn);
-            this.groupBox2.Controls.Add(this.mod_btn);
+            this.groupBox2.Controls.Add(this.update_btn);
             this.groupBox2.Controls.Add(this.del_btn);
             this.groupBox2.Controls.Add(this.add_btn);
             this.groupBox2.Controls.Add(this.age_tb);
@@ -80,23 +80,24 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Quản lý hồ sơ";
             // 
-            // blood_request_btn
+            // blood_don_ref
             // 
-            this.blood_request_btn.Location = new System.Drawing.Point(188, 204);
-            this.blood_request_btn.Name = "blood_request_btn";
-            this.blood_request_btn.Size = new System.Drawing.Size(173, 33);
-            this.blood_request_btn.TabIndex = 20;
-            this.blood_request_btn.Text = "Hồ sơ yêu cầu máu";
-            this.blood_request_btn.UseVisualStyleBackColor = true;
+            this.blood_don_ref.Location = new System.Drawing.Point(188, 204);
+            this.blood_don_ref.Name = "blood_don_ref";
+            this.blood_don_ref.Size = new System.Drawing.Size(173, 33);
+            this.blood_don_ref.TabIndex = 20;
+            this.blood_don_ref.Text = "Hồ sơ hiến máu";
+            this.blood_don_ref.UseVisualStyleBackColor = true;
             // 
-            // donation_record_btn
+            // blood_test_ref
             // 
-            this.donation_record_btn.Location = new System.Drawing.Point(9, 204);
-            this.donation_record_btn.Name = "donation_record_btn";
-            this.donation_record_btn.Size = new System.Drawing.Size(173, 33);
-            this.donation_record_btn.TabIndex = 19;
-            this.donation_record_btn.Text = "Hồ sơ hiến máu";
-            this.donation_record_btn.UseVisualStyleBackColor = true;
+            this.blood_test_ref.Location = new System.Drawing.Point(9, 204);
+            this.blood_test_ref.Name = "blood_test_ref";
+            this.blood_test_ref.Size = new System.Drawing.Size(173, 33);
+            this.blood_test_ref.TabIndex = 19;
+            this.blood_test_ref.Text = "Hồ sơ xét nghiệm";
+            this.blood_test_ref.UseVisualStyleBackColor = true;
+            this.blood_test_ref.Click += new System.EventHandler(this.blood_test_ref_Click);
             // 
             // cancel_btn
             // 
@@ -118,14 +119,14 @@
             this.confirm_btn.UseVisualStyleBackColor = true;
             this.confirm_btn.Visible = false;
             // 
-            // mod_btn
+            // update_btn
             // 
-            this.mod_btn.Location = new System.Drawing.Point(630, 204);
-            this.mod_btn.Name = "mod_btn";
-            this.mod_btn.Size = new System.Drawing.Size(115, 33);
-            this.mod_btn.TabIndex = 16;
-            this.mod_btn.Text = "Sửa";
-            this.mod_btn.UseVisualStyleBackColor = true;
+            this.update_btn.Location = new System.Drawing.Point(630, 204);
+            this.update_btn.Name = "update_btn";
+            this.update_btn.Size = new System.Drawing.Size(115, 33);
+            this.update_btn.TabIndex = 16;
+            this.update_btn.Text = "Sửa";
+            this.update_btn.UseVisualStyleBackColor = true;
             // 
             // del_btn
             // 
@@ -305,11 +306,11 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button blood_request_btn;
-        private System.Windows.Forms.Button donation_record_btn;
+        private System.Windows.Forms.Button blood_don_ref;
+        private System.Windows.Forms.Button blood_test_ref;
         private System.Windows.Forms.Button cancel_btn;
         private System.Windows.Forms.Button confirm_btn;
-        private System.Windows.Forms.Button mod_btn;
+        private System.Windows.Forms.Button update_btn;
         private System.Windows.Forms.Button del_btn;
         private System.Windows.Forms.Button add_btn;
         private System.Windows.Forms.TextBox age_tb;
