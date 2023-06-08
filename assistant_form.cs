@@ -45,6 +45,9 @@ namespace Blood_Bank_Management
             dataGridView1.Columns["Tuổi"].Width = 175;
             dataGridView1.Columns["Địa chỉ"].Width = 175;
 
+            if (dataGridView1.Rows.Count > 0)
+                dataGridView1.CurrentCell = dataGridView1.Rows[0].Cells[0];
+
             dataGridView1.CurrentCell = dataGridView1.Rows[0].Cells[0];
             id_tb.Text = dataGridView1.CurrentRow.Cells["ID"].Value.ToString();
             name_tb.Text = dataGridView1.CurrentRow.Cells["Họ và tên"].Value.ToString();
@@ -78,6 +81,13 @@ namespace Blood_Bank_Management
             String where = " where ast.assistant_id = '" + id_tb.Text.ToString() + "'";
             blood_test_form blood_Test_Form = new blood_test_form(where);
             blood_Test_Form.ShowDialog();
+        }
+
+        private void blood_don_ref_Click(object sender, EventArgs e)
+        {
+            String where = " where ast.assistant_id = '" + id_tb.Text.ToString() + "'";
+            manageDonation_record manageDonation_Record = new manageDonation_record(where);
+            manageDonation_Record.ShowDialog();
         }
     }
 }

@@ -38,6 +38,7 @@
             this.id_search = new System.Windows.Forms.TextBox();
             this.search_btn = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.blood_don_add_btn = new System.Windows.Forms.Button();
             this.blood_req_ref = new System.Windows.Forms.Button();
             this.blood_don_ref = new System.Windows.Forms.Button();
             this.cancel_btn = new System.Windows.Forms.Button();
@@ -59,7 +60,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.id_tb = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.blood_don_add_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -184,6 +184,16 @@
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Quản lý hồ sơ";
+            // 
+            // blood_don_add_btn
+            // 
+            this.blood_don_add_btn.Location = new System.Drawing.Point(9, 169);
+            this.blood_don_add_btn.Name = "blood_don_add_btn";
+            this.blood_don_add_btn.Size = new System.Drawing.Size(173, 33);
+            this.blood_don_add_btn.TabIndex = 21;
+            this.blood_don_add_btn.Text = "Tạo hồ sơ hiến máu";
+            this.blood_don_add_btn.UseVisualStyleBackColor = true;
+            this.blood_don_add_btn.Click += new System.EventHandler(this.blood_don_add_btn_Click);
             // 
             // blood_req_ref
             // 
@@ -376,15 +386,6 @@
             this.label4.Size = new System.Drawing.Size(20, 16);
             this.label4.TabIndex = 0;
             this.label4.Text = "ID";
-            // 
-            // blood_don_add_btn
-            // 
-            this.blood_don_add_btn.Location = new System.Drawing.Point(9, 169);
-            this.blood_don_add_btn.Name = "blood_don_add_btn";
-            this.blood_don_add_btn.Size = new System.Drawing.Size(173, 33);
-            this.blood_don_add_btn.TabIndex = 21;
-            this.blood_don_add_btn.Text = "Tạo hồ sơ hiến máu";
-            this.blood_don_add_btn.UseVisualStyleBackColor = true;
             // 
             // manageBlood_Participant
             // 

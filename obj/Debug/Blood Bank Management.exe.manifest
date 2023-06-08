@@ -66,14 +66,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Blood Bank Management.exe" size="110032">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Blood Bank Management.exe" size="119760">
       <assemblyIdentity name="Blood Bank Management" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>iSYuB0S7vYLJoqxV9C9ugwf/Q7Pdywm/3MQ1xDS5mhY=</dsig:DigestValue>
+        <dsig:DigestValue>jhq+tXft4RhVW6diq/2JWfx1MryAb+wh0kdUxDF9Sjg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -521,22 +521,22 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="BBDB.mdf" size="8388608" writeableType="applicationData">
+  <file name="BBDB.mdf" size="3342336" writeableType="applicationData">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>egPbtHQkbxpWIpDqPcrrRcIemJEABWsSIJUHer+tN0o=</dsig:DigestValue>
+      <dsig:DigestValue>zpyamrJj0bOS9do8FVUToCL5IXt5q0tEG5a4aoDNYqc=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="BBDB_log.ldf" size="8388608" writeableType="applicationData">
+  <file name="BBDB_log.ldf" size="851968" writeableType="applicationData">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>1/z6Mbi86u9oZjXSOZQjctEAELdrpndEfZrydqVusGQ=</dsig:DigestValue>
+      <dsig:DigestValue>Z8ybAXGJ0+j+4MxHd75J2g1bPnITVrEAu008QeBN0W0=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Blood Bank Management.exe.config" size="4105">

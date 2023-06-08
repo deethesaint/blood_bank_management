@@ -296,5 +296,10 @@ namespace Blood_Bank_Management
             String queryReload = "select bp.participant_id N'ID', bp.participant_name N'Họ và tên', bp.participant_age N'Tuổi', bp.participant_address N'Địa chỉ', bp.participant_phone N'Số điện thoại', bp.participant_email N'Email', bp.participant_blood_type N'Nhóm máu' from blood_participant as bp";
             db_Load(queryReload);
         }
+
+        private void blood_don_add_btn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

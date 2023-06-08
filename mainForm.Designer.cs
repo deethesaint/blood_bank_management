@@ -65,6 +65,7 @@
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -407,7 +408,7 @@
             this.groupBox6.Controls.Add(this.button14);
             this.groupBox6.Location = new System.Drawing.Point(548, 219);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(258, 236);
+            this.groupBox6.Size = new System.Drawing.Size(258, 232);
             this.groupBox6.TabIndex = 14;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Sự kiện hiến máu";
@@ -452,11 +453,21 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(12, 659);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(366, 16);
+            this.label13.TabIndex = 16;
+            this.label13.Text = "Clone this in https//github.com/deethesaint - Vu Thanh Duong";
+            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1197, 684);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox4);
@@ -479,6 +490,7 @@
             this.groupBox7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -521,6 +533,7 @@
         private System.Windows.Forms.Label brhdp;
         private System.Windows.Forms.Label arhdp;
         private System.Windows.Forms.Button refresh;
+        private System.Windows.Forms.Label label13;
     }
 }
 

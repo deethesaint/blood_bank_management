@@ -20,6 +20,7 @@ namespace Blood_Bank_Management
             InitializeComponent();
             CenterToScreen();
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.dataGridView1.CellClick += dataGridView1_CellClick;
         }
 
         public manageDonation_record(String where)
@@ -27,6 +28,7 @@ namespace Blood_Bank_Management
             InitializeComponent();
             CenterToScreen();
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.dataGridView1.CellClick += dataGridView1_CellClick;
             this.where = where;
         }
 
@@ -63,6 +65,24 @@ namespace Blood_Bank_Management
             }
         }
 
+        private void execute_db(String query)
+        {
+            SqlConnection connection = DatabaseConnection.Instance.getConnection();
+            try
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand(query, connection);
+                command.ExecuteNonQuery();
+                connection.Close();
+            }
+            catch (SqlException ex)
+            {
+                connection.Close();
+            }
+            String queryReload = "select dr.record_id N'ID', dr.participant_id N'ID Người hiến', bp.participant_name N'Tên người hiến',\r\n\t   dr.blood_type N'Nhóm máu', dr.record_date N'Ngày hiến', dr.record_blood_quantity N'Thể tích',\r\n\t   ast.assistant_name N'Nhân viên', dr.blood_record_approval N'Tình trạng'\r\nfrom donation_record dr\r\njoin blood_participant bp on dr.participant_id = bp.participant_id\r\njoin assistant ast on ast.assistant_id = dr.assistant_id";
+            db_Load(queryReload);
+        }
+
         private void manageDonation_record_Load(object sender, EventArgs e)
         {
             String query = "select dr.record_id N'ID', dr.participant_id N'ID Người hiến', bp.participant_name N'Tên người hiến',\r\n\t   dr.blood_type N'Nhóm máu', dr.record_date N'Ngày hiến', dr.record_blood_quantity N'Thể tích',\r\n\t   ast.assistant_name N'Nhân viên', dr.blood_record_approval N'Tình trạng'\r\nfrom donation_record dr\r\njoin blood_participant bp on dr.participant_id = bp.participant_id\r\njoin assistant ast on ast.assistant_id = dr.assistant_id";
@@ -70,11 +90,65 @@ namespace Blood_Bank_Management
             db_Load(query);
         }
 
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow selectedRow = dataGridView1.Rows[e.RowIndex];
+                id_tb.Text = selectedRow.Cells["ID"].Value.ToString();
+                name_tb.Text = selectedRow.Cells["Tên người hiến"].Value.ToString();
+                ktv_tb.Text = selectedRow.Cells["Nhân viên"].Value.ToString();
+                date_tb.Text = selectedRow.Cells["Ngày hiến"].Value.ToString();
+                cap_tb.Text = selectedRow.Cells["Thể tích"].Value.ToString();
+                comboBox2.Text = selectedRow.Cells["Nhóm máu"].Value.ToString();
+                bool state = Convert.ToBoolean(selectedRow.Cells["Tình trạng"].Value);
+                if (state)
+                    state_tb.Text = "Được chấp nhận";
+                else
+                    state_tb.Text = "Không được tiếp nhận";
+            }    
+        }
+
         private void blood_test_ref_Click(object sender, EventArgs e)
         {
             String where_inner = " where bt.record_id = '" + dataGridView1.CurrentRow.Cells["ID"].Value.ToString() + "'";
             blood_test_form blood_Test = new blood_test_form(where_inner);
             blood_Test.ShowDialog();
+        }
+
+        private void del_btn_Click(object sender, EventArgs e)
+        {
+            String query = "delete donation_record where record_id = '" + dataGridView1.CurrentRow.Cells["ID"].Value.ToString() + "'";
+            execute_db(query);
+        }
+
+        private void update_btn_Click(object sender, EventArgs e)
+        {
+            cap_tb.Enabled = true;
+            del_btn.Enabled = false;
+            confirm_btn.Visible = true;
+            cancel_btn.Visible = true;
+            dataGridView1.Enabled = false;
+        }
+
+        private void confirm_btn_Click(object sender, EventArgs e)
+        {
+            cap_tb.Enabled = false;
+            del_btn.Enabled = true;
+            confirm_btn.Visible = false;
+            cancel_btn.Visible = false;
+            dataGridView1.Enabled = true;
+            String query = "update donation_record set record_blood_quantity = " + cap_tb.Text.ToString() + " where record_id = '" + dataGridView1.CurrentRow.Cells["ID"].Value.ToString() + "'";
+            execute_db(query);
+        }
+
+        private void cancel_btn_Click(object sender, EventArgs e)
+        {
+            cap_tb.Enabled = false;
+            del_btn.Enabled = true;
+            confirm_btn.Visible = false;
+            cancel_btn.Visible = false;
+            dataGridView1.Enabled = true;
         }
     }
 }

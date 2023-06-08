@@ -37,13 +37,13 @@
             this.del_btn = new System.Windows.Forms.Button();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.age_tb = new System.Windows.Forms.TextBox();
+            this.state_tb = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.address_tb = new System.Windows.Forms.TextBox();
+            this.cap_tb = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.email_tb = new System.Windows.Forms.TextBox();
+            this.date_tb = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.phone_tb = new System.Windows.Forms.TextBox();
+            this.ktv_tb = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.name_tb = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -83,13 +83,13 @@
             this.groupBox2.Controls.Add(this.del_btn);
             this.groupBox2.Controls.Add(this.comboBox2);
             this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.age_tb);
+            this.groupBox2.Controls.Add(this.state_tb);
             this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.address_tb);
+            this.groupBox2.Controls.Add(this.cap_tb);
             this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.email_tb);
+            this.groupBox2.Controls.Add(this.date_tb);
             this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.phone_tb);
+            this.groupBox2.Controls.Add(this.ktv_tb);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.name_tb);
             this.groupBox2.Controls.Add(this.label5);
@@ -121,6 +121,7 @@
             this.cancel_btn.Text = "Thoát";
             this.cancel_btn.UseVisualStyleBackColor = true;
             this.cancel_btn.Visible = false;
+            this.cancel_btn.Click += new System.EventHandler(this.cancel_btn_Click);
             // 
             // confirm_btn
             // 
@@ -131,6 +132,7 @@
             this.confirm_btn.Text = "Xác nhận";
             this.confirm_btn.UseVisualStyleBackColor = true;
             this.confirm_btn.Visible = false;
+            this.confirm_btn.Click += new System.EventHandler(this.confirm_btn_Click);
             // 
             // update_btn
             // 
@@ -140,6 +142,7 @@
             this.update_btn.TabIndex = 16;
             this.update_btn.Text = "Sửa";
             this.update_btn.UseVisualStyleBackColor = true;
+            this.update_btn.Click += new System.EventHandler(this.update_btn_Click);
             // 
             // del_btn
             // 
@@ -149,6 +152,7 @@
             this.del_btn.TabIndex = 15;
             this.del_btn.Text = "Xóa";
             this.del_btn.UseVisualStyleBackColor = true;
+            this.del_btn.Click += new System.EventHandler(this.del_btn_Click);
             // 
             // comboBox2
             // 
@@ -168,13 +172,13 @@
             this.label10.TabIndex = 12;
             this.label10.Text = "Nhóm máu";
             // 
-            // age_tb
+            // state_tb
             // 
-            this.age_tb.Enabled = false;
-            this.age_tb.Location = new System.Drawing.Point(452, 103);
-            this.age_tb.Name = "age_tb";
-            this.age_tb.Size = new System.Drawing.Size(221, 22);
-            this.age_tb.TabIndex = 11;
+            this.state_tb.Enabled = false;
+            this.state_tb.Location = new System.Drawing.Point(452, 103);
+            this.state_tb.Name = "state_tb";
+            this.state_tb.Size = new System.Drawing.Size(221, 22);
+            this.state_tb.TabIndex = 11;
             // 
             // label9
             // 
@@ -185,13 +189,13 @@
             this.label9.TabIndex = 10;
             this.label9.Text = "Tình trạng";
             // 
-            // address_tb
+            // cap_tb
             // 
-            this.address_tb.Enabled = false;
-            this.address_tb.Location = new System.Drawing.Point(452, 29);
-            this.address_tb.Name = "address_tb";
-            this.address_tb.Size = new System.Drawing.Size(221, 22);
-            this.address_tb.TabIndex = 9;
+            this.cap_tb.Enabled = false;
+            this.cap_tb.Location = new System.Drawing.Point(452, 29);
+            this.cap_tb.Name = "cap_tb";
+            this.cap_tb.Size = new System.Drawing.Size(221, 22);
+            this.cap_tb.TabIndex = 9;
             // 
             // label8
             // 
@@ -202,13 +206,13 @@
             this.label8.TabIndex = 8;
             this.label8.Text = "Dung tích";
             // 
-            // email_tb
+            // date_tb
             // 
-            this.email_tb.Enabled = false;
-            this.email_tb.Location = new System.Drawing.Point(104, 141);
-            this.email_tb.Name = "email_tb";
-            this.email_tb.Size = new System.Drawing.Size(221, 22);
-            this.email_tb.TabIndex = 7;
+            this.date_tb.Enabled = false;
+            this.date_tb.Location = new System.Drawing.Point(104, 141);
+            this.date_tb.Name = "date_tb";
+            this.date_tb.Size = new System.Drawing.Size(221, 22);
+            this.date_tb.TabIndex = 7;
             // 
             // label7
             // 
@@ -219,13 +223,13 @@
             this.label7.TabIndex = 6;
             this.label7.Text = "Ngày hiến";
             // 
-            // phone_tb
+            // ktv_tb
             // 
-            this.phone_tb.Enabled = false;
-            this.phone_tb.Location = new System.Drawing.Point(104, 103);
-            this.phone_tb.Name = "phone_tb";
-            this.phone_tb.Size = new System.Drawing.Size(221, 22);
-            this.phone_tb.TabIndex = 5;
+            this.ktv_tb.Enabled = false;
+            this.ktv_tb.Location = new System.Drawing.Point(104, 103);
+            this.ktv_tb.Name = "ktv_tb";
+            this.ktv_tb.Size = new System.Drawing.Size(221, 22);
+            this.ktv_tb.TabIndex = 5;
             // 
             // label6
             // 
@@ -357,13 +361,13 @@
         private System.Windows.Forms.Button del_btn;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox age_tb;
+        private System.Windows.Forms.TextBox state_tb;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox address_tb;
+        private System.Windows.Forms.TextBox cap_tb;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox email_tb;
+        private System.Windows.Forms.TextBox date_tb;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox phone_tb;
+        private System.Windows.Forms.TextBox ktv_tb;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox name_tb;
         private System.Windows.Forms.Label label5;

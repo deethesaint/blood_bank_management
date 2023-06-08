@@ -88,6 +88,7 @@
             this.blood_don_ref.TabIndex = 20;
             this.blood_don_ref.Text = "Hồ sơ hiến máu";
             this.blood_don_ref.UseVisualStyleBackColor = true;
+            this.blood_don_ref.Click += new System.EventHandler(this.blood_don_ref_Click);
             // 
             // blood_test_ref
             // 
@@ -148,9 +149,9 @@
             // 
             // age_tb
             // 
+            this.age_tb.Enabled = false;
             this.age_tb.Location = new System.Drawing.Point(452, 66);
             this.age_tb.Name = "age_tb";
-            this.age_tb.ReadOnly = true;
             this.age_tb.Size = new System.Drawing.Size(221, 22);
             this.age_tb.TabIndex = 11;
             // 
@@ -165,9 +166,9 @@
             // 
             // address_tb
             // 
+            this.address_tb.Enabled = false;
             this.address_tb.Location = new System.Drawing.Point(452, 29);
             this.address_tb.Name = "address_tb";
-            this.address_tb.ReadOnly = true;
             this.address_tb.Size = new System.Drawing.Size(221, 22);
             this.address_tb.TabIndex = 9;
             // 
@@ -182,9 +183,9 @@
             // 
             // name_tb
             // 
+            this.name_tb.Enabled = false;
             this.name_tb.Location = new System.Drawing.Point(104, 66);
             this.name_tb.Name = "name_tb";
-            this.name_tb.ReadOnly = true;
             this.name_tb.Size = new System.Drawing.Size(221, 22);
             this.name_tb.TabIndex = 3;
             // 
@@ -199,9 +200,9 @@
             // 
             // id_tb
             // 
+            this.id_tb.Enabled = false;
             this.id_tb.Location = new System.Drawing.Point(104, 29);
             this.id_tb.Name = "id_tb";
-            this.id_tb.ReadOnly = true;
             this.id_tb.Size = new System.Drawing.Size(221, 22);
             this.id_tb.TabIndex = 1;
             // 

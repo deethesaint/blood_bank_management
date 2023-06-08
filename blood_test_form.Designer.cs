@@ -30,15 +30,15 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.res_rtb = new System.Windows.Forms.RichTextBox();
             this.cancel_btn = new System.Windows.Forms.Button();
             this.confirm_btn = new System.Windows.Forms.Button();
             this.update_btn = new System.Windows.Forms.Button();
             this.del_btn = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.phone_tb = new System.Windows.Forms.TextBox();
+            this.date_tb = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.name_tb = new System.Windows.Forms.TextBox();
+            this.ktv_tb = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.id_tb = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -71,15 +71,15 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.richTextBox1);
+            this.groupBox2.Controls.Add(this.res_rtb);
             this.groupBox2.Controls.Add(this.cancel_btn);
             this.groupBox2.Controls.Add(this.confirm_btn);
             this.groupBox2.Controls.Add(this.update_btn);
             this.groupBox2.Controls.Add(this.del_btn);
             this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.phone_tb);
+            this.groupBox2.Controls.Add(this.date_tb);
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.name_tb);
+            this.groupBox2.Controls.Add(this.ktv_tb);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.id_tb);
             this.groupBox2.Controls.Add(this.label4);
@@ -90,14 +90,14 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Quản lý hồ sơ";
             // 
-            // richTextBox1
+            // res_rtb
             // 
-            this.richTextBox1.Enabled = false;
-            this.richTextBox1.Location = new System.Drawing.Point(417, 27);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(319, 96);
-            this.richTextBox1.TabIndex = 21;
-            this.richTextBox1.Text = "";
+            this.res_rtb.Enabled = false;
+            this.res_rtb.Location = new System.Drawing.Point(417, 27);
+            this.res_rtb.Name = "res_rtb";
+            this.res_rtb.Size = new System.Drawing.Size(319, 96);
+            this.res_rtb.TabIndex = 21;
+            this.res_rtb.Text = "";
             // 
             // cancel_btn
             // 
@@ -108,6 +108,7 @@
             this.cancel_btn.Text = "Thoát";
             this.cancel_btn.UseVisualStyleBackColor = true;
             this.cancel_btn.Visible = false;
+            this.cancel_btn.Click += new System.EventHandler(this.cancel_btn_Click);
             // 
             // confirm_btn
             // 
@@ -118,6 +119,7 @@
             this.confirm_btn.Text = "Xác nhận";
             this.confirm_btn.UseVisualStyleBackColor = true;
             this.confirm_btn.Visible = false;
+            this.confirm_btn.Click += new System.EventHandler(this.confirm_btn_Click);
             // 
             // update_btn
             // 
@@ -127,6 +129,7 @@
             this.update_btn.TabIndex = 16;
             this.update_btn.Text = "Sửa";
             this.update_btn.UseVisualStyleBackColor = true;
+            this.update_btn.Click += new System.EventHandler(this.update_btn_Click);
             // 
             // del_btn
             // 
@@ -136,6 +139,7 @@
             this.del_btn.TabIndex = 15;
             this.del_btn.Text = "Xóa";
             this.del_btn.UseVisualStyleBackColor = true;
+            this.del_btn.Click += new System.EventHandler(this.del_btn_Click);
             // 
             // label8
             // 
@@ -146,13 +150,13 @@
             this.label8.TabIndex = 8;
             this.label8.Text = "Kết quả";
             // 
-            // phone_tb
+            // date_tb
             // 
-            this.phone_tb.Enabled = false;
-            this.phone_tb.Location = new System.Drawing.Point(119, 103);
-            this.phone_tb.Name = "phone_tb";
-            this.phone_tb.Size = new System.Drawing.Size(221, 22);
-            this.phone_tb.TabIndex = 5;
+            this.date_tb.Enabled = false;
+            this.date_tb.Location = new System.Drawing.Point(119, 103);
+            this.date_tb.Name = "date_tb";
+            this.date_tb.Size = new System.Drawing.Size(221, 22);
+            this.date_tb.TabIndex = 5;
             // 
             // label6
             // 
@@ -163,13 +167,13 @@
             this.label6.TabIndex = 4;
             this.label6.Text = "Ngày xét nghiệm";
             // 
-            // name_tb
+            // ktv_tb
             // 
-            this.name_tb.Enabled = false;
-            this.name_tb.Location = new System.Drawing.Point(119, 67);
-            this.name_tb.Name = "name_tb";
-            this.name_tb.Size = new System.Drawing.Size(221, 22);
-            this.name_tb.TabIndex = 3;
+            this.ktv_tb.Enabled = false;
+            this.ktv_tb.Location = new System.Drawing.Point(119, 67);
+            this.ktv_tb.Name = "ktv_tb";
+            this.ktv_tb.Size = new System.Drawing.Size(221, 22);
+            this.ktv_tb.TabIndex = 3;
             // 
             // label5
             // 
@@ -295,15 +299,15 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox res_rtb;
         private System.Windows.Forms.Button cancel_btn;
         private System.Windows.Forms.Button confirm_btn;
         private System.Windows.Forms.Button update_btn;
         private System.Windows.Forms.Button del_btn;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox phone_tb;
+        private System.Windows.Forms.TextBox date_tb;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox name_tb;
+        private System.Windows.Forms.TextBox ktv_tb;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox id_tb;
         private System.Windows.Forms.Label label4;
